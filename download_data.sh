@@ -23,5 +23,10 @@ hf download sugusu/my-pro DeformTransGS/experiments/stage5_0_R3_C2_perspective_v
 echo "==> DeformTransGS/experiments/GT data from dataset repo..."
 hf download sugusu/my-pro-data DeformTransGS/experiments/stage4_0_attribute_sufficiency_gate --repo-type dataset --local-dir . 2>/dev/null || true
 
+echo "==> ReliablePeakGS data from dataset repo..."
+hf download sugusu/my-pro-data ReliablePeakGS/data --repo-type dataset --local-dir . 2>/dev/null || true
+hf download sugusu/my-pro-data ReliablePeakGS/external --repo-type dataset --local-dir . 2>/dev/null || true
+hf download sugusu/my-pro-data ReliablePeakGS/environment --repo-type dataset --local-dir . 2>/dev/null || true
+
 echo ""
 echo "Done! All data downloaded."

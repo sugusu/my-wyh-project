@@ -21,5 +21,10 @@ echo "==> Uploading DeformTransGS to dataset repo..."
 hf upload sugusu/my-pro-data DeformTransGS/experiments/stage4_0_attribute_sufficiency_gate \
   DeformTransGS/experiments/stage4_0_attribute_sufficiency_gate --repo-type dataset
 
+echo "==> Uploading ReliablePeakGS to dataset repo..."
+hf upload sugusu/my-pro-data ReliablePeakGS/data ReliablePeakGS/data --repo-type dataset
+hf upload sugusu/my-pro-data ReliablePeakGS/external ReliablePeakGS/external --repo-type dataset
+hf upload sugusu/my-pro-data ReliablePeakGS/environment ReliablePeakGS/environment --repo-type dataset
+
 echo ""
 echo "Done! All data uploaded."
