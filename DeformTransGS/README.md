@@ -433,3 +433,18 @@ The previous `CASE RTSPLAT-NATIVE-STATE-CONTROL-FAIL` is retired for the current
 - Isotropic microstructure is a null control; rigid transformations preserve intrinsic response under identical local-view semantics.
 - Conclusions are limited to the controlled microstructure-derived mechanism.
 
+## Stage E0-A Nonrigid Incremental Identifiability Gate
+
+- Original AttributeDeformGS attribute-release line remains stopped.
+- Anisotropic optical-transport line remains stopped after frozen finite-bit sensor protocol failure.
+- New low-cost candidate Gate: `NONRIGID INCREMENTAL IDENTIFIABILITY`.
+- Candidate novelty is not generic motion-helping inverse rendering.
+- Required claim is narrower: under matched local-view directions, equal observation budgets, and identical unknown parameters, known nonrigid deformation may provide geometry-optics constraints unavailable from rigid motion alone.
+- Stage E0-A is pointwise and does not train a Gaussian model.
+- STATIC1, RIGID4, and DEFORM4 receive the same 24 local-view directions.
+- Primary comparison: DEFORM4 vs RIGID4.
+- Inverse unknowns: two canonical-normal parameters and three shared optical-depth parameters.
+- Jacobian Gate runs before any optimization; optimization is forbidden if the Jacobian Gate fails.
+- Final CASE: `CASE E0A-PROVENANCE-FAIL`.
+- New primary line: `STOP`.
+

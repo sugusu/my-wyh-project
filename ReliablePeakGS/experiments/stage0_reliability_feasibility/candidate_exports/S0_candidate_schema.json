@@ -1,0 +1,41 @@
+{
+  "status": "IMPLEMENTED-NOT-RUN",
+  "exporter": "/data/wyh/ReliablePeakGS/reliable_peak_gs/candidate_export/export_tspe_candidates.py",
+  "format": "parquet",
+  "primary_rows": "one row per default TSPE candidate per image ray",
+  "fields": [
+    "scene_id",
+    "view_id",
+    "pixel_x",
+    "pixel_y",
+    "ray_id",
+    "candidate_id",
+    "threshold_index",
+    "threshold_value",
+    "depth",
+    "world_x",
+    "world_y",
+    "world_z",
+    "peak_height",
+    "peak_width",
+    "peak_prominence",
+    "accumulated_opacity",
+    "accumulated_transmittance",
+    "contribution_mass",
+    "contributing_gaussian_count",
+    "top_contributing_gaussian_ids",
+    "official_candidate_probability",
+    "candidate_order_by_depth",
+    "candidate_order_by_score",
+    "foreground_mask",
+    "transparent_region_mask",
+    "ray_candidate_count",
+    "near_clip",
+    "far_clip",
+    "validity_flag"
+  ],
+  "notes": [
+    "TSPE-GS does not expose per-candidate Gaussian contribution IDs through the Python renderer. Those fields are schema-compatible placeholders until the CUDA renderer is instrumented via an auditable patch.",
+    "The current exporter reuses render_threshold and the official KDE peak threshold selection from mesh_extract_opa_hotfix.py."
+  ]
+}

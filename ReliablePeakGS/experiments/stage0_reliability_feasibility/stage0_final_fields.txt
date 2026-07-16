@@ -1,0 +1,79 @@
+A. environment audit PASS/FAIL: PASS_WITH_MISSING_NVCC_AND_CONDA
+B. official multi-depth baseline name: TSPE-GS
+C. official repository URL: https://github.com/nortonii/TSPE-GS
+D. official repository commit: NOT-LOCKED; observed web short SHA cac432c
+E. baseline license: NOT-AUDITED-SOURCE-NOT-DOWNLOADED
+F. candidate dataset count: 1 candidate recorded, 0 downloaded
+G. valid GT dataset count: 0
+H. selected scene names: NONE
+I. selected scene count: 0
+J. metric-scale scene count: 0
+K. S0-G0: FAIL_BLOCKED_LOCAL_SOURCE_ACQUISITION
+L. camera/GT geometry valid scene count: 0
+M. excluded scene count: 0
+N. S0-G1: NOT-RUN
+O. baseline reproduction scene count: 0
+P. paper-metric reproduction count: 0
+Q. functional-only reproduction count: 0
+R. failed reproduction count: 0
+S. S0-G2: FAIL
+T. total exported ray count: 0
+U. total exported candidate count: 0
+V. mean candidates per transparent ray: NOT-AVAILABLE
+W. candidate export deterministic agreement: NOT-RUN
+X. S0-G3: NOT-RUN
+Y. independent export replay ray count: 0
+Z. candidate count agreement: NOT-RUN
+AA. depth replay p99 error: NOT-RUN
+AB. S0-G4: NOT-RUN
+AC. TRUE candidate count: 0
+AD. FALSE candidate count: 0
+AE. IGNORE candidate count: 0
+AF. outer-layer positive count: 0
+AG. inner-layer positive count: 0
+AH. GT label replay agreement: NOT-RUN
+AI. S0-G5: NOT-RUN
+AJ. perturbation configuration count: 9 defined, 0 executed
+AK. candidate perturbation-match rate: NOT-RUN
+AL. mean valid neighbouring-view count: NOT-RUN
+AM. mean cross-view support fraction: NOT-RUN
+AN. cycle-pass fraction: NOT-RUN
+AO. feature row count: 0
+AP. GT-derived feature leakage count: NOT-APPLICABLE
+AQ. finite feature fraction: NOT-RUN
+AR. S0-G6: NOT-RUN
+AS. evaluated held-out fold count: 0
+AT. best single-view baseline name: NOT-RUN
+AU. best single-view mean AUPRC: NOT-RUN
+AV. OURS-FULL mean AUPRC: NOT-RUN
+AW. AUPRC absolute improvement: NOT-RUN
+AX. best single-view mean Brier: NOT-RUN
+AY. OURS-FULL mean Brier: NOT-RUN
+AZ. Brier reduction: NOT-RUN
+BA. best single-view mean ECE: NOT-RUN
+BB. OURS-FULL mean ECE: NOT-RUN
+BC. ECE reduction: NOT-RUN
+BD. top50% median geometry-error reduction: NOT-RUN
+BE. TRUE-candidate ray-selection improvement: NOT-RUN
+BF. outer-layer AUPRC improvement: NOT-RUN
+BG. inner-layer AUPRC improvement or NOT-AVAILABLE: NOT-AVAILABLE
+BH. scenes with non-negative AUPRC improvement: 0
+BI. scenes with >=0.08 AUPRC improvement: 0
+BJ. OURS-CROSSVIEW vs BASELINE-B4 AUPRC improvement: NOT-RUN
+BK. metric reproduction maximum difference: NOT-RUN
+BL. S0-G7: NOT-RUN
+BM. G8-A: NOT-RUN
+BN. G8-B: NOT-RUN
+BO. G8-C: NOT-RUN
+BP. G8-D: NOT-RUN
+BQ. G8-E: NOT-RUN
+BR. G8-F: NOT-RUN
+BS. G8-G: NOT-RUN
+BT. scientific evidence scope: NONE; infrastructure/source-acquisition failure only
+BU. Final CASE: BASELINE-REPRODUCTION-FAIL
+BV. new primary line STOP/CONTINUE/CONTINUE-WITH-DATA-RISK: STOP
+BW. allow Stage1 reliability-guided fusion yes/no: no
+BX. allow Gaussian training modification yes/no: no
+BY. next exact research action: repair server GitHub HTTPS access or provide official TSPE-GS source archive with verifiable commit SHA and license, then rerun Stage 0 from source lock onward using only CUDA_VISIBLE_DEVICES=2,3
+BZ. report path: /data/wyh/ReliablePeakGS/experiments/stage0_reliability_feasibility/stage0_reliability_report.md
+CA. summary path: /data/wyh/ReliablePeakGS/experiments/stage0_reliability_feasibility/stage0_reliability_summary.md

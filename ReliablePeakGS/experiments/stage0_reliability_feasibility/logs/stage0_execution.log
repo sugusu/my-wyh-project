@@ -1,0 +1,13 @@
+2026-07-16T07:00:53Z Created ReliablePeakGS directory skeleton.
+2026-07-16T07:00:53Z Ran CUDA_VISIBLE_DEVICES=2,3 nvidia-smi. PyTorch later confirmed two visible devices.
+2026-07-16T07:00:53Z nvcc --version failed: nvcc not found.
+2026-07-16T07:00:53Z python --version failed: python not found.
+2026-07-16T07:01:xxZ python3 --version succeeded: Python 3.10.12.
+2026-07-16T07:01:xxZ conda --version failed: conda not found.
+2026-07-16T07:01:xxZ pip3 --version succeeded: pip 26.1.2.
+2026-07-16T07:01:xxZ CUDA_VISIBLE_DEVICES=2,3 python3 torch audit succeeded: torch 2.6.0+cu124, CUDA 12.4, visible device count 2.
+2026-07-16T07:02:xxZ git clone https://github.com/nortonii/TSPE-GS.git failed: gnutls_handshake() failed.
+2026-07-16T07:03:xxZ git ls-remote and shallow clone for TSPE-GS failed with same TLS error.
+2026-07-16T07:03:xxZ git ls-remote for TSGS failed with same TLS error.
+2026-07-16T07:04:xxZ curl archive downloads for TSPE-GS and TSGS failed with TLS unexpected EOF.
+2026-07-16T07:05:00Z Wrote environment audit, source inventory, blocked reports, and required NOT-RUN manifests.

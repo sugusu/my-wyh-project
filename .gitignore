@@ -14,3 +14,8 @@ RecycleGS/outputs/
 RecycleGS/实时日志.md
 RecycleGS/realtime_log.md
 RecycleGS/*.npy
+
+# ReliablePeakGS - large data hosted on HuggingFace
+ReliablePeakGS/data/
+ReliablePeakGS/external/
+ReliablePeakGS/environment/

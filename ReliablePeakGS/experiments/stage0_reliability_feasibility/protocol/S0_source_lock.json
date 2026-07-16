@@ -1,0 +1,42 @@
+{
+  "timestamp_utc": "2026-07-16T07:05:00Z",
+  "source_lock_status": "PARTIAL-PASS",
+  "official_repositories": [
+    {
+      "method": "TSPE-GS",
+      "remote_url": "https://github.com/nortonii/TSPE-GS",
+      "default_branch": "main",
+      "observed_short_commit_from_web": "cac432c",
+      "local_commit_sha": "cac432ccf3fd9ecccb8da9afd35c323e6b5b5665",
+      "clone_status": "CLONED_AFTER_UNSETTING_BAD_PROXY",
+      "archive_download_status": "NOT-NEEDED",
+      "submodule_shas": {
+        "diff-gaussian-rasterization/third_party/glm": "6f14f4792a0cde5d0cf2c910506724d61cb95834"
+      },
+      "dirty_status": "UNTRACKED_GLM_SUBMODULE_DIRECTORY_ONLY",
+      "license_path": "submodules/diff-gaussian-rasterization/LICENSE.md; top-level license not present"
+    },
+    {
+      "method": "TSGS",
+      "remote_url": "https://github.com/longxiang-ai/TSGS",
+      "default_branch": "main",
+      "local_commit_sha": "NOT-LOCKED",
+      "clone_status": "NOT-CLONED-IN-CONTINUED-RUN",
+      "archive_download_status": "NOT-NEEDED",
+      "submodule_shas": "NOT-AVAILABLE",
+      "dirty_status": "NOT-AVAILABLE",
+      "license_path": "NOT-AUDITED-SOURCE-NOT-DOWNLOADED"
+    }
+  ],
+  "datasets": [
+    {
+      "name": "AlphaSurf",
+      "remote_url": "https://github.com/ChikaYan/alphasurf.git",
+      "local_commit_sha": "bd24e58fbc59f0624d59ab8afa87573d1b8249df",
+      "branch": "publish",
+      "official_data_url": "https://drive.google.com/file/d/10OvhfGj9P4t5esdy9NTriBWm-jKE2n8w/view",
+      "download_status": "IN-PROGRESS"
+    }
+  ],
+  "policy": "No official TSPE-GS source logic was modified. Local wrappers are under /data/wyh/ReliablePeakGS/scripts. The glm header-only dependency was cloned into the declared submodule path to compile the official rasterizer."
+}

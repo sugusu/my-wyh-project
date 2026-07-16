@@ -35,6 +35,8 @@ def sha256_file(path):
 
 
 def parse_cfg_args(path):
+    if not Path(path).exists():
+        return {}
     raw = Path(path).read_text().strip()
     if not raw:
         raise ValueError(f"empty cfg_args: {path}")
@@ -81,6 +83,8 @@ def command_value(command, flag):
 
 def parse_saved_defaults(arguments_path):
     """Return simple literal defaults from TSGS arguments/__init__.py."""
+    if not Path(arguments_path).exists():
+        return {}
     text = Path(arguments_path).read_text(errors="replace")
     defaults = {}
     import ast

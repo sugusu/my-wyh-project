@@ -16,6 +16,7 @@ def main():
     oom = load(OUT_STAGE0RC / "oom_root_cause.json")
     growth = load(OUT_STAGE0RC / "gaussian_growth_summary.json")
     sparse = load(OUT_STAGE0RC / "sparse_layout_audit.json")
+    deleted = load(OUT_STAGE0RC / "deleted_evidence.json")
     if comp and comp.get("FAILED_RUN_NOT_EXACT_OFFICIAL_WRAPPER"):
         state = "FAILED_RUN_CONFIG_INEXACT"
     else:
@@ -27,6 +28,8 @@ def main():
         "",
         "## Summary",
         "",
+        f"- Deleted original Stage 0R evidence status: `{deleted.get('status') if deleted else 'missing'}`",
+        f"- Fallback comparison model: `{deleted.get('fallback_model') if deleted else 'missing'}`",
         f"- Failed run exact wrapper mismatch: `{comp.get('FAILED_RUN_NOT_EXACT_OFFICIAL_WRAPPER') if comp else 'missing'}`",
         f"- Missing/different fields: `{', '.join(comp.get('missing_or_different_fields', [])) if comp else 'missing'}`",
         f"- OOM operation: `{oom.get('last_operation') if oom else 'missing'}`",

@@ -1,0 +1,4 @@
+{
+  "status": "NOT-RUN",
+  "reason": "Feature table requires candidate exports, perturbation exports, cross-view matches, and GT labels."
+}
