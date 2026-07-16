@@ -1,0 +1,2 @@
+RT-Splatting: https://github.com/sjj118/RT-Splatting commit 3f45b3c (2026-07-12)
+nvdiffrast: https://github.com/NVlabs/nvdiffrast latest main (use at or before RT-Splatting dev period)

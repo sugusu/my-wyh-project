@@ -1,0 +1,91 @@
+scene_name: scene_01
+
+work_root: /data/wyh
+project_root: /data/wyh/RecycleGS
+
+data_root_candidates:
+  - /data/wyh/RecycleGS/data/translab
+  - /data/wyh/f4splat/data/translab
+
+checkpoint_root_candidates:
+  - /data/wyh/RecycleGS/baselines/tsgs_scene01
+
+output_dir: /data/wyh/RecycleGS/outputs
+log_path: /data/wyh/RecycleGS/realtime_log.md
+
+baseline_type: TSGS
+baseline_model_dir: /data/wyh/RecycleGS/baselines/tsgs_scene01
+baseline_gaussian_checkpoint: /data/wyh/RecycleGS/baselines/tsgs_scene01/point_cloud/iteration_15000/point_cloud.ply
+
+gpu:
+  cuda_visible_devices: "2,3"
+  max_physical_gpus: [2, 3]
+
+image_dir_candidates:
+  - images
+  - image
+  - rgb
+
+mask_dir_candidates:
+  - transparent_masks
+  - masks
+  - mask
+
+normal_dir_candidates:
+  - normals
+  - normal
+
+mesh_candidates:
+  - meshes/gt.ply
+  - mesh.ply
+  - gt_mesh.ply
+  - gt.ply
+
+gaussian_candidates:
+  - point_cloud/iteration_30000/point_cloud.ply
+  - point_cloud/iteration_20000/point_cloud.ply
+  - point_cloud/iteration_15000/point_cloud.ply
+  - point_cloud.ply
+
+camera_candidates:
+  - cameras.json
+  - transforms_train.json
+  - sparse/0/images.bin
+  - sparse/0/cameras.bin
+  - sparse/images.bin
+  - sparse/cameras.bin
+
+reliability:
+  max_views_per_gaussian: 12
+  image_downscale: 4
+  mask_weight: 0.30
+  normal_weight: 0.25
+  depth_weight: 0.25
+  visibility_weight: 0.10
+  scale_weight: 0.10
+  risk_top_ratio: 0.05
+  min_contribution_for_ambiguous: 0.01
+
+prune:
+  ratios: [0.02, 0.05, 0.10]
+  methods:
+    - random
+    - opacity
+    - scale
+    - reliability
+
+reseed:
+  enabled: true
+  budget_preserving: true
+  candidate_topk_multiplier: 5
+  nms_radius_factor: 2.0
+  init_opacity_logit: -1.5
+  normal_scale_ratio: 0.3
+
+# Step5 full TransLab data settings
+data_mode: translab_full
+scene_dir: /data/wyh/RecycleGS/data/translab_full/scene_01
+baseline_type: TSGS_FULL
+baseline_model_dir: /data/wyh/RecycleGS/baselines/tsgs_scene01_full
+baseline_gaussian_checkpoint: /data/wyh/RecycleGS/baselines/tsgs_scene01_full/point_cloud/iteration_15000/point_cloud.ply
+debug_only: false

@@ -1,0 +1,133 @@
+# Stage 3.6A-R4 Render-Scope First Transparent Mesh Scaffold Closure
+
+## 1. RS0
+
+PASS
+
+## 2. non-empty OBJ block count/IDs
+
+21/[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+## 3. backward elimination iteration count
+
+2
+
+## 4. initial J_scene
+
+0.258944
+
+## 5. final J_scene
+
+0.259207
+
+## 6. removed block IDs
+
+[0, 20]
+
+## 7. frozen render-scope block IDs
+
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+
+## 8. discovery render-scope median/min IoU
+
+0.250920/0.184153
+
+## 9. validation render-scope median/min IoU
+
+0.260007/0.189386
+
+## 10. validation render-scope precision/recall
+
+0.524245/0.359520
+
+## 11. RS1
+
+FAIL
+
+## 12. transparent block eligible count/IDs
+
+0/[]
+
+## 13. transparent block validation median/min IoU
+
+nan/nan
+
+## 14. transparent block validation precision/recall
+
+nan/nan
+
+## 15. transparent block pass yes/no
+
+NO
+
+## 16. component fallback executed yes/no
+
+NO
+
+## 17. transparent component eligible count
+
+0
+
+## 18. component validation median/min IoU
+
+nan/nan
+
+## 19. component validation precision/recall
+
+nan/nan
+
+## 20. component pass yes/no
+
+NO
+
+## 21. formal transparent primitive
+
+NONE
+
+## 22. scaffold all-camera median/min IoU
+
+nan/nan
+
+## 23. scaffold validation median/min IoU
+
+nan/nan
+
+## 24. scaffold validation precision/recall
+
+nan/nan
+
+## 25. RS2
+
+FAIL
+
+## 26. RS3
+
+PASS
+
+## 27. Final CASE
+
+CASE SOURCE-OBJ-RENDER-SCOPE-NOT-RECOVERABLE
+
+## 28. formal scaffold path
+
+NONE
+
+## 29. GT mesh route continue/stop
+
+STOP
+
+## 30. allow final KIOT Kill Gate yes/no
+
+NO
+
+## 31. KIOT status
+
+UNDECIDED
+
+## 32. report path
+
+/data/wyh/DeformTransGS/experiments/stage3_6A_R4_render_scope_transparent_scaffold_closure/render_scope_transparent_scaffold_closure_report.md
+
+## 33. summary path
+
+/data/wyh/DeformTransGS/experiments/stage3_6A_R4_render_scope_transparent_scaffold_closure/stage3_6A_R4_summary.md

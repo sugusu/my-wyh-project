@@ -1,0 +1,16 @@
+validation_iou: FOUND
+validation_precision: FOUND
+validation_recall: FOUND
+KIOT: FOUND
+P0: FOUND
+P1: FOUND
+P2: FOUND
+P3: FOUND
+P4: FOUND
+opacity: FOUND
+render_scope_block_lock.json_mtime=1784019591.066221
+render_scope_validation_iou.csv_mtime=1784019592.690249
+transparent_block_lock.json_mtime=1784019592.694250
+transparent_block_validation_iou.csv_mtime=1784019592.694250
+selection_validation_file_read=NO
+forbidden_policy_execution=NO

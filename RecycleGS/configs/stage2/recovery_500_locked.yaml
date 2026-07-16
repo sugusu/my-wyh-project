@@ -1,0 +1,29 @@
+# Stage 2B: Recovery 500 - 500-step retraining after mask-risk pruning
+# Locked configuration for fair comparison across all methods
+
+seed: 0
+
+recovery_steps: 500
+start_iteration: 15001
+end_iteration: 15500
+log_interval: 25
+save_interval: 500
+
+densify_from_iter: 999999
+densify_until_iter: 0
+opacity_reset_interval: 999999
+
+# -- Method-specific removed indices mapping --
+methods:
+  schedule_control:
+    removed_indices: null  # no pruning, continue from original checkpoint
+  random:
+    removed_indices: outputs/prune_only/{scene_name}/ratio_005/random/prune_indices.npy
+  low_opacity:
+    removed_indices: outputs/prune_only/{scene_name}/ratio_005/low_opacity/prune_indices.npy
+  low_contribution:
+    removed_indices: outputs/prune_only/{scene_name}/ratio_005/low_contribution/prune_indices.npy
+  mask_risk:
+    removed_indices: outputs/prune_only/{scene_name}/ratio_005/mask_risk/prune_indices.npy
+
+device: cuda:0

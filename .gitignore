@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+.idea/
+.vscode/
+
+# Large data hosted on HuggingFace
+DeformTransGS/experiments/
+RecycleGS/data/translab/
+RecycleGS/data/translab_full/
+RecycleGS/baselines/
+RecycleGS/outputs/
+RecycleGS/实时日志.md
+RecycleGS/realtime_log.md
+RecycleGS/*.npy

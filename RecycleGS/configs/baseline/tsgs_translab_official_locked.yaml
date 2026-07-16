@@ -1,0 +1,72 @@
+# Official TransLab 30k Training Recipe (locked baseline for Stage 0R)
+# Source: run_translab.sh + scripts/run_translab.py official flags
+
+training:
+  iterations: 30000
+  resolution: 2
+  seed: 42
+  delight: true
+  normal: true
+  eval: true
+  use_asg: true
+
+  # Delight schedule
+  delight_iterations: 15000
+  sd_normal_until_iter: 30000
+  normal_cos_threshold_iter: 3000
+  ncc_loss_from_iter: 7000
+
+  # Freeze optimizer (nofix_*)
+  nofix_position: true
+  nofix_scaling: true
+  nofix_rotation: true
+  nofix_opacity: false
+  nofix_param: false
+
+  # Checkpoint / test schedule
+  save_iterations:
+    - 7000
+    - 10000
+    - 15000
+    - 20000
+    - 30000
+  test_iterations:
+    - 7000
+    - 10000
+    - 15000
+    - 20000
+    - 30000
+  checkpoint_iterations:
+    - 7000
+    - 10000
+    - 15000
+    - 20000
+
+  # Mesh / rendering (post-training)
+  render_iteration: 30000
+  num_cluster: 5
+  mesh_expname: mesh
+  window_size: 0.03
+  start_threshold: 0.0
+  end_threshold: 0.2
+
+data:
+  source_path: /data/wyh/RecycleGS/data/translab_full/scene_01
+  images: images
+  white_background: false
+  data_device: cuda
+  preload_img: true
+  ncc_scale: 1.0
+  multi_view_num: 8
+  multi_view_max_angle: 30
+  multi_view_min_dis: 0.01
+  multi_view_max_dis: 1.5
+  normal_folder: normals
+  mask_background: false
+  use_delighted_normal: false
+  use_transparencies_map: false
+  not_delight_only_transparent: false
+  load2gpu_on_the_fly: false
+  is_real: false
+  is_indoor: false
+  add_val: false

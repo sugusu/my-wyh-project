@@ -1,0 +1,87 @@
+# Gate 1 locked configuration
+# Frozen after Stage 1F validation on scene_01.
+# All subsequent Gate 1 validation must use these exact settings.
+
+scene_name: gate1_locked
+seed: 0
+
+project_root: /data/wyh/RecycleGS
+tsgs_root: /data/wyh/repos/TSGS
+
+# -- Reference scene (scene_01) --
+scene_01:
+  scene_dir: /data/wyh/RecycleGS/data/translab_full/scene_01
+  model_dir: /data/wyh/RecycleGS/baselines/tsgs_scene01_full
+  checkpoint_iteration: 15000
+  checkpoint_path: /data/wyh/RecycleGS/baselines/tsgs_scene01_full/point_cloud/iteration_15000/point_cloud.ply
+  reliability_output_dir: /data/wyh/RecycleGS/outputs/reliability/scene_01
+  figure_output_dir: /data/wyh/RecycleGS/outputs/figures/scene_01
+  debug_output_dir: /data/wyh/RecycleGS/outputs/debug/stage1_scene01
+
+# -- Cross-scene validation scene (scene_03) --
+scene_03:
+  scene_dir: /data/wyh/RecycleGS/data/translab_full/scene_03
+  model_dir: /data/wyh/RecycleGS/baselines/tsgs_scene03_full
+  checkpoint_iteration: 15000
+  checkpoint_path: /data/wyh/RecycleGS/baselines/tsgs_scene03_full/point_cloud/iteration_15000/point_cloud.ply
+  reliability_output_dir: /data/wyh/RecycleGS/outputs/reliability/scene_03
+  figure_output_dir: /data/wyh/RecycleGS/outputs/figures/scene_03
+  debug_output_dir: /data/wyh/RecycleGS/outputs/debug/stage1_scene03
+
+# -- Shared locked parameters --
+device: cuda:0
+
+analysis_views:
+  mode: uniform
+  count: 64
+  use_all_views_final: false
+
+projection:
+  gaussian_chunk_size: 16384
+  view_chunk_size: 8
+  min_positive_depth: 1.0e-6
+  min_projected_radius: 0.25
+
+reference:
+  export_rgb: true
+  export_depth: true
+  export_normal: true
+  export_alpha: true
+  export_visibility: true
+  export_radii: true
+  freeze_checkpoint: true
+
+mesh_evaluation:
+  sample_points: 500000
+  correct_threshold_norm: 0.005
+  wrong_threshold_norm: 0.020
+
+normal:
+  use_absolute_cosine: true
+  aggregation: weighted_median
+
+depth_order:
+  relative_tolerance: 0.01
+  absolute_tolerance_scale: 0.5
+  only_penalize_behind_reference: true
+
+surface_support:
+  knn: 24
+  radius_multiplier: 3.0
+  use_normal_alignment: true
+
+scale:
+  percentile_low: 0.01
+  percentile_high: 0.99
+
+risk_weights:
+  mask: 0.15
+  normal: 0.30
+  depth_order: 0.20
+  surface_support: 0.25
+  scale: 0.10
+
+evaluation:
+  top_ratios: [0.05, 0.10, 0.20]
+  bootstrap_samples: 1000
+  confidence_level: 0.95

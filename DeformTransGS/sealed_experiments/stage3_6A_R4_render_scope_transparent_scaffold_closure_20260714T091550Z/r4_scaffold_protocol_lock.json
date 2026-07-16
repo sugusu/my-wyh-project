@@ -1,0 +1,78 @@
+{
+  "stage": "3.6A-R4",
+  "cuda_visible_devices": "2,3",
+  "inputs": [
+    {
+      "path": "/data/wyh/DeformTransGS/experiments/stage3_6A_R2_mesh_projection_scope_closure/r2_mesh_projection_protocol_lock.json",
+      "exists": true,
+      "sha256": "59a5f2875d5b623c737757069a5a747c740d2a241db0766ac36d08376c928c5d"
+    },
+    {
+      "path": "/data/wyh/DeformTransGS/experiments/stage3_6A_R2_mesh_projection_scope_closure/exact_camera_mask_map.csv",
+      "exists": true,
+      "sha256": "c2833344972943de93ccc3ab0924f3d0237df85e455c37a47f943724230870ba"
+    },
+    {
+      "path": "/data/wyh/DeformTransGS/experiments/stage3_6A_R3_occlusion_aware_transparent_mesh_recovery/r3_mesh_scope_protocol_lock.json",
+      "exists": true,
+      "sha256": "0a0a546e2da2abda7b853abc4ca0d1227ca830746f768fd65ba7882edad71027"
+    },
+    {
+      "path": "/data/wyh/DeformTransGS/experiments/stage3_6A_R3_occlusion_aware_transparent_mesh_recovery/visible_label_render_manifest.csv",
+      "exists": true,
+      "sha256": "57655bacb89a729b7a648aa51652e89e688d79be060e3b9079742d05df5590cc"
+    },
+    {
+      "path": "/data/wyh/DeformTransGS/experiments/stage3_6A_R3_occlusion_aware_transparent_mesh_recovery/mesh_scope_camera_split.csv",
+      "exists": true,
+      "sha256": "3e87ce800131dfc78716c2a84060c43ddc2cc21e64f1c6a9874b358d45450964"
+    },
+    {
+      "path": "/data/wyh/RecycleGS/data/translab_full/scene_01/meshes/scene_mesh.obj",
+      "exists": true,
+      "sha256": "f5071fac9e4d79159da588d8352510647a26ce0dcc124e126eef14a8c23abfc8"
+    },
+    {
+      "path": "/data/wyh/RecycleGS/data/translab_full/scene_01/meshes/scene_mesh.mtl",
+      "exists": true,
+      "sha256": "93e8023d4db22ac6cf7e06879ca0577bcd966f1b39d71fc09a96dc4f1ea37047"
+    },
+    {
+      "path": "/data/wyh/RecycleGS/data/translab_full/scene_01/sparse/0/cameras.txt",
+      "exists": true,
+      "sha256": "259f0249166febe92fb61d866f41774110a70637cc0af75a3594e245c23a8073"
+    },
+    {
+      "path": "/data/wyh/RecycleGS/data/translab_full/scene_01/sparse/0/images.txt",
+      "exists": true,
+      "sha256": "15be084aad3366f28de587283b07271438d77c55f5a998b9ec6cb0a1d9cf133b"
+    },
+    {
+      "path": "/data/wyh/RecycleGS/data/translab_full/scene_01/masks",
+      "exists": true,
+      "sha256": "directory"
+    },
+    {
+      "path": "/data/wyh/RecycleGS/data/translab_full/scene_01/transparent_masks",
+      "exists": true,
+      "sha256": "directory"
+    }
+  ],
+  "forbidden": [
+    "KIOT",
+    "opacity policies",
+    "Gaussian binding",
+    "deformation",
+    "Sim3",
+    "ICP",
+    "camera changes",
+    "projection changes",
+    "manual object selection",
+    "object-name selection",
+    "material-name selection",
+    "manual face selection",
+    "face-level transparent recovery",
+    "component threshold tuning",
+    "validation cameras during selection"
+  ]
+}

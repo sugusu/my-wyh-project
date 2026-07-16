@@ -1,0 +1,50 @@
+# Stage 2A: Type-A Prune-Only (Mask-Risk) Locked Configuration
+# This is a mask-risk prune-only experiment with immediate evaluation.
+# No retraining, no reseeding.
+
+scene_name: type_a_prune_locked
+seed: 42
+
+project_root: /data/wyh/RecycleGS
+tsgs_root: /data/wyh/repos/TSGS
+
+prune_ratio: 0.005  # 0.5% of total Gaussians
+max_eligible_prune_ratio: 0.30  # max 30% of eligible pool
+
+# -- Prune methods --
+methods:
+  - random
+  - low_opacity
+  - low_contribution
+  - mask_risk
+  - oracle
+
+# -- Reference scene (scene_01) --
+scene_01:
+  scene_name: scene_01
+  scene_dir: /data/wyh/RecycleGS/data/translab_full/scene_01
+  model_dir: /data/wyh/RecycleGS/baselines/tsgs_scene01_full
+  checkpoint_iteration: 15000
+  checkpoint_path: /data/wyh/RecycleGS/baselines/tsgs_scene01_full/point_cloud/iteration_15000/point_cloud.ply
+  reliability_output_dir: /data/wyh/RecycleGS/outputs/reliability/scene_01
+  debug_output_dir: /data/wyh/RecycleGS/outputs/debug/stage1h_scene01
+  prune_output_dir: /data/wyh/RecycleGS/outputs/prune_only/scene_01
+
+scene_03:
+  scene_name: scene_03
+  scene_dir: /data/wyh/RecycleGS/data/translab_full/scene_03
+  model_dir: /data/wyh/RecycleGS/baselines/tsgs_scene03_full
+  checkpoint_iteration: 15000
+  checkpoint_path: /data/wyh/RecycleGS/baselines/tsgs_scene03_full/point_cloud/iteration_15000/point_cloud.ply
+  reliability_output_dir: /data/wyh/RecycleGS/outputs/reliability/scene_03
+  debug_output_dir: /data/wyh/RecycleGS/outputs/debug/stage1h_scene03
+  prune_output_dir: /data/wyh/RecycleGS/outputs/prune_only/scene_03
+
+# -- Eligibility criteria --
+eligibility:
+  min_valid_views: 5
+  max_mask_variance: 0.20
+  max_boundary_view_ratio: 0.50
+  max_contribution_percentile: 0.80
+
+device: cuda:0
