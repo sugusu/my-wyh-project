@@ -1,0 +1,6 @@
+experiment: {name: stage2s_split_b_scene01, seed: 42, physical_gpu: 3}
+paths:
+  scene: /data/wyh/TRGRGS/data/stage2s/split_b/scene_01
+  model: /data/wyh/TRGRGS/checkpoints/split_b/scene_01
+split: {rule: "original_train_index % 7 == 3", train_count: 300, holdout_count: 50}
+training: {iterations: 30000, delight_iterations: 15000, resolution: 2, normal_folder: normals, use_asg: true, asg_degree: 24}

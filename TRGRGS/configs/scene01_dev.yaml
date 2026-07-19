@@ -1,0 +1,28 @@
+experiment:
+  name: trgrgs_scene01_dev
+  seed: 42
+  allowed_gpus: [2, 3]
+paths:
+  project_root: /data/wyh/TRGRGS
+  tsgs_root: /data/wyh/TRGRGS/third_party/TSGS
+  data_root: /data/wyh/TRGRGS/data/translab
+  scene_path: /data/wyh/TRGRGS/data/translab/scene_01
+  gt_mesh: /data/wyh/TRGRGS/data/translab/scene_01/meshes/scene_mesh.obj
+  baseline_model: /data/wyh/TRGRGS/checkpoints/baseline/scene_01
+  output_root: /data/wyh/TRGRGS/outputs/scene_01
+baseline:
+  iterations: 30000
+  delight_iterations: 15000
+  resolution: 2
+  seed: 42
+  use_asg: true
+  asg_degree: 24
+  normal_folder: normals
+  normal_folder_policy: prefer_complete_transnormals_else_normals
+coordinate_audit:
+  mask_folder: transparent_masks
+  roundtrip_samples: 10000
+  roundtrip_relative_tolerance: 1.0e-5
+  median_iou_threshold: 0.90
+  overlay_alpha: 0.45
+

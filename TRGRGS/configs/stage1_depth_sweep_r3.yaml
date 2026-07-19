@@ -1,0 +1,21 @@
+prerequisite:
+  required_report: /data/wyh/TRGRGS/reports/stage06_r3_evaluation_protocol_equivalence.json
+  required_status: PASS_PROTOCOL_EQUIVALENT
+terminology:
+  renderer_depth: max_weight_threshold_window_depth
+  uncertainty: threshold_conditioned_depth_dispersion
+gate:
+  repeat_render_max_depth_difference: 1.0e-6
+  transparent_mask_min_three_depth_coverage: 0.90
+  dispersion_std_min: 1.0e-4
+  all_zero_ratio_max: 0.05
+  nonfinite_ratio: 0.0
+  min_nontrivial_dispersion_pixel_ratio: 0.05
+  nontrivial_dispersion_absolute: 0.0010963053256825855
+  require_controlled_cuda_reference_match: true
+  require_output_inside_selected_window: true
+  renderer_monotonicity_gate: false
+execution:
+  formal_depth_sweep_run_this_stage: false
+  gpu: 2
+

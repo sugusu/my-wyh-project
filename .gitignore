@@ -19,3 +19,10 @@ RecycleGS/*.npy
 ReliablePeakGS/data/
 ReliablePeakGS/external/
 ReliablePeakGS/environment/
+
+# TRGRGS - large data hosted on HuggingFace
+TRGRGS/checkpoints/
+TRGRGS/outputs/
+TRGRGS/logs/
+TRGRGS/reports/
+TRGRGS/data/
