@@ -26,5 +26,12 @@ hf upload sugusu/my-pro-data ReliablePeakGS/data ReliablePeakGS/data --repo-type
 hf upload sugusu/my-pro-data ReliablePeakGS/external ReliablePeakGS/external --repo-type dataset
 hf upload sugusu/my-pro-data ReliablePeakGS/environment ReliablePeakGS/environment --repo-type dataset
 
+echo "==> Uploading TRGRGS to dataset repo..."
+hf upload sugusu/my-pro-data TRGRGS/checkpoints TRGRGS/checkpoints --repo-type dataset
+hf upload sugusu/my-pro-data TRGRGS/outputs TRGRGS/outputs --repo-type dataset
+hf upload sugusu/my-pro-data TRGRGS/logs TRGRGS/logs --repo-type dataset
+hf upload sugusu/my-pro-data TRGRGS/reports TRGRGS/reports --repo-type dataset
+hf upload sugusu/my-pro-data TRGRGS/data/stage2s TRGRGS/data/stage2s --repo-type dataset
+
 echo ""
 echo "Done! All data uploaded."

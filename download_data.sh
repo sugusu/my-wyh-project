@@ -28,5 +28,12 @@ hf download sugusu/my-pro-data ReliablePeakGS/data --repo-type dataset --local-d
 hf download sugusu/my-pro-data ReliablePeakGS/external --repo-type dataset --local-dir . 2>/dev/null || true
 hf download sugusu/my-pro-data ReliablePeakGS/environment --repo-type dataset --local-dir . 2>/dev/null || true
 
+echo "==> TRGRGS data from dataset repo..."
+hf download sugusu/my-pro-data TRGRGS/checkpoints --repo-type dataset --local-dir . 2>/dev/null || true
+hf download sugusu/my-pro-data TRGRGS/outputs --repo-type dataset --local-dir . 2>/dev/null || true
+hf download sugusu/my-pro-data TRGRGS/logs --repo-type dataset --local-dir . 2>/dev/null || true
+hf download sugusu/my-pro-data TRGRGS/reports --repo-type dataset --local-dir . 2>/dev/null || true
+hf download sugusu/my-pro-data TRGRGS/data/stage2s --repo-type dataset --local-dir . 2>/dev/null || true
+
 echo ""
 echo "Done! All data downloaded."
